@@ -1,9 +1,9 @@
-import "./App.css";
+import { Header } from "./CommonComponenet/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      <h2>Real Estate Project Start</h2>
+   <Header />
     </div>
   );
 }
