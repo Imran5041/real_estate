@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Roboto'";
+  background-color: hsla(0, 0%, 100%, 0.817);
 }
 
 code {
