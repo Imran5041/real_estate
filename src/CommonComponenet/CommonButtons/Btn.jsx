@@ -1,10 +1,11 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 
-const Btn = ({label="login"}) => {
+const Btn = ({label="login",onClick}) => {
   return (
     <Box>
       <Button
+      onClick={onClick}
         variant="contained"
         sx={{
           backgroundColor: "#14B8A6",

@@ -2,8 +2,10 @@ import React from "react";
 import { Box, Button, TextField, Typography, Paper, Link } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -17,7 +19,9 @@ const Login = () => {
       console.log("Login:", values);
     },
   });
-
+const handleSignUp = () =>{
+  navigate("/signUp")
+}
   return (
     <Box
       minHeight="100vh"
@@ -120,6 +124,7 @@ const Login = () => {
             href="#"
             underline="none"
             sx={{ color: "#14B8A6", fontWeight: 500 }}
+            onClick={handleSignUp}
           >
             Sign-Up
           </Link>

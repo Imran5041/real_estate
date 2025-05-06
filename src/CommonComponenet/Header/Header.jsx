@@ -32,6 +32,10 @@ export default function Header() {
     navigate("/login");
   };
 
+  const handleSignUp = ()=>{
+    navigate("/signUp")
+  }
+
   const drawerContent = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
@@ -83,8 +87,8 @@ export default function Header() {
               ))}
 
               {/* Auth Buttons */}
-              <Btn  />
-              <Btn label="Sign Up" onClick={handleLogin} />
+              <Btn  onClick={handleLogin} />
+              <Btn label="Sign Up" onClick={handleSignUp} />
             </Stack>
           )}
         </Toolbar>

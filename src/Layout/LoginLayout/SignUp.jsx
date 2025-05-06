@@ -2,8 +2,10 @@ import React from "react";
 import { Box, Button, TextField, Typography, Paper, Link } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate()
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -19,6 +21,9 @@ const SignUp = () => {
       console.log("Sign Up:", values);
     },
   });
+  const handleLogin = () =>{
+    navigate("/login")
+  }
 
   return (
     <Box
@@ -142,6 +147,7 @@ const SignUp = () => {
             href="#"
             underline="none"
             sx={{ color: "#14B8A6", fontWeight: 500 }}
+            onClick={handleLogin}
           >
             Log In
           </Link>
