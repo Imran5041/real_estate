@@ -50,6 +50,9 @@ export default function Header() {
     </Box>
   );
 
+  const handleHome = () =>{
+    navigate("/")
+  }
   return (
     <>
       <AppBar
@@ -59,7 +62,9 @@ export default function Header() {
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* Logo */}
-          <Typography variant="h1" sx={{ fontWeight: "bold", color: "teal" }}>
+          <Typography variant="h1" sx={{ fontWeight: "bold", color: "teal",cursor:"pointer" }}
+          onClick={handleHome}
+          >
             DocOnCall
           </Typography>
 

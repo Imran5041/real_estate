@@ -33,7 +33,7 @@ const handleSignUp = () =>{
       }}
     >
       <Paper
-        elevation={10}
+        elevation={2}
         sx={{
           padding: 4,
           width: 350,
@@ -69,7 +69,10 @@ const handleSignUp = () =>{
               sx: {
                 borderRadius: 6, // You can adjust the rounding here
                 backgroundColor: "#fff",
-                height:50
+                height:50,
+                '& input::placeholder': {
+                  fontSize: '0.8rem', // adjust as needed
+                },
             
               },
             }}
@@ -93,7 +96,10 @@ const handleSignUp = () =>{
               sx: {
                 borderRadius: 6,
                 backgroundColor: "#fff",
-                height:50
+                height:50,
+                '& input::placeholder': {
+                  fontSize: '0.8rem', // adjust as needed
+                },
               },
             }}
           />
@@ -110,7 +116,7 @@ const handleSignUp = () =>{
               fontSize: "1rem",
               textTransform: "none",
               ":hover": {
-                backgroundColor: "#17b18a",
+                backgroundColor: "#14B8A6",
               },
             }}
           >

@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       fullName: "",
@@ -15,15 +15,17 @@ const SignUp = () => {
     validationSchema: Yup.object({
       fullName: Yup.string().required("Full name is required"),
       email: Yup.string().email("Invalid email").required("Email is required"),
-      password: Yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+      password: Yup.string()
+        .min(6, "Password must be at least 6 characters")
+        .required("Password is required"),
     }),
     onSubmit: (values) => {
       console.log("Sign Up:", values);
     },
   });
-  const handleLogin = () =>{
-    navigate("/login")
-  }
+  const handleLogin = () => {
+    navigate("/login");
+  };
 
   return (
     <Box
@@ -36,7 +38,7 @@ const SignUp = () => {
       }}
     >
       <Paper
-        elevation={10}
+        elevation={2}
         sx={{
           padding: 4,
           width: 350,
@@ -71,7 +73,10 @@ const SignUp = () => {
               sx: {
                 borderRadius: 6,
                 backgroundColor: "#fff",
-                height:50
+                height: 50,
+                '& input::placeholder': {
+                  fontSize: '0.8rem', // adjust as needed
+                },
               },
             }}
           />
@@ -93,7 +98,10 @@ const SignUp = () => {
               sx: {
                 borderRadius: 6,
                 backgroundColor: "#fff",
-                height:50
+                height: 50,
+                '& input::placeholder': {
+                  fontSize: '0.8rem', // adjust as needed
+                },
               },
             }}
           />
@@ -116,7 +124,10 @@ const SignUp = () => {
               sx: {
                 borderRadius: 6,
                 backgroundColor: "#fff",
-                height:50
+                height: 50,
+                '& input::placeholder': {
+                  fontSize: '0.8rem', // adjust as needed
+                },
               },
             }}
           />
@@ -133,7 +144,7 @@ const SignUp = () => {
               fontSize: "1rem",
               textTransform: "none",
               ":hover": {
-                backgroundColor: "#17b18a",
+                backgroundColor: "#14B8A6",
               },
             }}
           >
