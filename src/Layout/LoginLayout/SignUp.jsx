@@ -66,6 +66,7 @@ const SignUp = () => {
               sx: {
                 borderRadius: 6,
                 backgroundColor: "#fff",
+                height:50
               },
             }}
           />
@@ -87,6 +88,7 @@ const SignUp = () => {
               sx: {
                 borderRadius: 6,
                 backgroundColor: "#fff",
+                height:50
               },
             }}
           />
@@ -109,6 +111,7 @@ const SignUp = () => {
               sx: {
                 borderRadius: 6,
                 backgroundColor: "#fff",
+                height:50
               },
             }}
           />

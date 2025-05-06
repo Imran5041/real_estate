@@ -65,6 +65,7 @@ const Login = () => {
               sx: {
                 borderRadius: 6, // You can adjust the rounding here
                 backgroundColor: "#fff",
+                height:50
             
               },
             }}
@@ -88,6 +89,7 @@ const Login = () => {
               sx: {
                 borderRadius: 6,
                 backgroundColor: "#fff",
+                height:50
               },
             }}
           />

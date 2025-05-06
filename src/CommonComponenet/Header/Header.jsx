@@ -16,14 +16,20 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Btn from "../CommonButtons/Btn";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
+  };
+
+  const handleLogin = () => {
+    navigate("/login");
   };
 
   const drawerContent = (
@@ -77,8 +83,8 @@ export default function Header() {
               ))}
 
               {/* Auth Buttons */}
-              <Btn />
-              <Btn label="Sign Up" />
+              <Btn  />
+              <Btn label="Sign Up" onClick={handleLogin} />
             </Stack>
           )}
         </Toolbar>
