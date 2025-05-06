@@ -4,16 +4,23 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   typography: {
     h1: {
-      fontSize: "2.5rem",
+      fontSize: "2rem",
       fontWeight: 700,
       lineHeight: 1.2,
-      color: "red", // optional
+    },
+    h2:{
+      color:"#000",
+      fontSize:"27px",
+      fontWeight:"600",
+      lineHeight:"30px",
     },
     h5:{
-        color:"blue"
+        color:"#000",
+        fontSize:"16px",
+        fontWeight:"600",
     },
     body1:{
-        color:"yellow"
+        color:"#14B8A6"
     }
   },
   components: {

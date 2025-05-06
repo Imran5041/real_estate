@@ -1,16 +1,93 @@
-import React from "react";
-import { Box, Button, Container, Typography } from "@mui/material";
-export const Header = () => {
-  return (
-    <Box sx={{ background: "#fff" }}>
-      <Container maxWidth="1200px">
-        <Box>
-          <img src="/images/logo.png" alt="logo" width="50px" height="50px" />
-          <Typography variant="h1">Header</Typography>
-          <Button variant="primary">Click</Button>
-          <Typography variant="body1">Hello</Typography>
-        </Box>
-      </Container>
+import React, { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  Button,
+  Stack,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import Btn from "../CommonButtons/Btn";
+
+export default function Header() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const toggleDrawer = (open) => () => {
+    setDrawerOpen(open);
+  };
+
+  const drawerContent = (
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <List>
+        {["Home", "Specialties", "Contact Us", "Login", "Sign Up"].map(
+          (text) => (
+            <ListItem button key={text}>
+              <ListItemText primary={text} />
+            </ListItem>
+          )
+        )}
+      </List>
     </Box>
   );
-};
+
+  return (
+    <>
+      <AppBar
+        position="static"
+        elevation={4}
+        sx={{ backgroundColor: "white", color: "teal",padding:"8px" }}
+      >
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          {/* Logo */}
+          <Typography variant="h1" sx={{ fontWeight: "bold", color: "teal" }}>
+            DocOnCall
+          </Typography>
+
+          {/* Right Section */}
+          {isMobile ? (
+            <IconButton edge="end" color="inherit" onClick={toggleDrawer(true)}>
+              <MenuIcon />
+            </IconButton>
+          ) : (
+            <Stack direction="row" spacing={3} alignItems="center">
+              {/* Navigation Items */}
+              {["Home", "Specialties", "Contact Us"].map((text) => (
+                <Typography
+                  key={text}
+                  variant="body1"
+                  sx={{
+                    cursor: "pointer",
+                    color: "#14B8A6",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                  }}
+                >
+                  {text}
+                </Typography>
+              ))}
+
+              {/* Auth Buttons */}
+              <Btn />
+              <Btn label="Sign Up" />
+            </Stack>
+          )}
+        </Toolbar>
+      </AppBar>
+
+      {/* Drawer */}
+      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+        {drawerContent}
+      </Drawer>
+    </>
+  );
+}
