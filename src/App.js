@@ -6,11 +6,17 @@ import { ThemeProvider } from "@emotion/react";
 import theme from "./theme";
 import SignUp from "./Layout/LoginLayout/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BannerPage from "./Pages/BannerPage";
+import Specilization from "./Pages/Specilization/Specilization";
+import Symption from "./Pages/Symption/Symption";
 
 function App() {
   const Home = () => (
     <>
       <Header />
+      <BannerPage />
+      <Specilization />
+      <Symption />
       <Footer />
     </>
   );

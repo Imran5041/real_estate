@@ -14,6 +14,16 @@ const theme = createTheme({
       fontWeight:"600",
       lineHeight:"30px",
     },
+    h3:{
+      color:"#000",
+      fontSize:"35px",
+      fontWeight:"600",
+      lineHeight:"50px",
+      "@media (max-width: 600px)": {
+        fontSize: "22px",
+        lineHeight: "30px",
+      },
+    },
     h5:{
         color:"#000",
         fontSize:"16px",
@@ -23,6 +33,11 @@ const theme = createTheme({
         color:"#14B8A6",
         fontSize:"20px",
         fontWeight:"500",
+    },
+    body2:{
+      color:"#000",
+      fontSize:"14px",
+      fontWeight:"500",
     }
   },
   components: {
