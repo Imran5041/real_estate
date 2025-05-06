@@ -5,6 +5,7 @@ import Footer from "./CommonComponenet/Footer/Footer";
 import Btn from "./CommonComponenet/CommonButtons/Btn";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./theme";
+import SignUp from "./Layout/LoginLayout/SignUp";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <Login />
+        <SignUp />
         <Footer />
       </ThemeProvider>
     </div>

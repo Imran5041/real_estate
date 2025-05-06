@@ -20,7 +20,9 @@ const theme = createTheme({
         fontWeight:"600",
     },
     body1:{
-        color:"#14B8A6"
+        color:"#14B8A6",
+        fontSize:"20px",
+        fontWeight:"500",
     }
   },
   components: {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Link, Grid } from "@mui/material";
-
+import Btn from "../CommonButtons/Btn"
 const Footer = () => {
   return (
     <Box
@@ -56,19 +56,13 @@ const Footer = () => {
       <Grid container spacing={4} justifyContent="space-between">
         {/* Left Side */}
         <Grid item xs={12} md={4}>
-          <Typography variant="h2" sx={{color:"#fff"}}>
+          <Typography variant="h2" sx={{ color: "#fff" }}>
             DocOnCall
           </Typography>
-          <Typography sx={{ mt: 2 }}>
+          <Typography variant="body1" sx={{ mt: 2 }}>
             <strong>Contact Us</strong>
             <br />
             New Delhi, Delhi, India 🇮🇳 ❤️ 🤍 💚
-          </Typography>
-          <Typography sx={{ mt: 2 }}>
-            Find this project on{" "}
-            <Link href="#" color="inherit" underline="hover">
-              <strong>GitHub</strong>
-            </Link>
           </Typography>
         </Grid>
 
@@ -79,36 +73,26 @@ const Footer = () => {
           md={4}
           sx={{ textAlign: { xs: "left", md: "right" } }}
         >
-          <Typography sx={{ mb: 1 }}>Specialties</Typography>
+          <Typography variant="body1" sx={{ mb: 1 }}>Quick Links</Typography>
           <Link
             href="#"
-            color="inherit"
+            color="#fff"
             underline="hover"
             display="block"
-            sx={{ mb: 1 }}
+            sx={{ mb: 1,fontSize: "17px" }}
           >
-            DOCTOR Login
+          Dr.Harry william
           </Link>
           <Link
             href="#"
-            color="inherit"
+            color="#fff"
             underline="hover"
             display="block"
-            sx={{ mb: 2 }}
+            sx={{ mb: 1,fontSize: "17px" }}
           >
-            DOCTOR Sign-Up
+          Dr. Virginia Apgar
           </Link>
-          <Button
-            variant="contained"
-            sx={{
-              bgcolor: "#00c4b4",
-              color: "#fff",
-              fontWeight: "bold",
-              "&:hover": { bgcolor: "#00b0a3" },
-            }}
-          >
-            CONSULT
-          </Button>
+        {/* <Btn label="Contact" /> */}
         </Grid>
       </Grid>
 
@@ -120,9 +104,8 @@ const Footer = () => {
         textAlign="center"
       >
         <Typography variant="body2" color="white">
-          Developed with <span style={{ color: "#ff4d6d" }}>❤️</span> by{" "}
-          <span style={{ color: "#00d4ae" }}>Harsh Batra</span> &{" "}
-          <span style={{ color: "#fdfd96" }}>Pradeep Vishwakarma</span>
+          Developed with <span style={{ color: "#ff4d6d" }}>❤️</span> by the{" "}
+          <span style={{ color: "#00d4ae" }}>DocOnCall</span> team
         </Typography>
         <Typography variant="caption" display="block" mt={1}>
           2025 © DocOnCall. All rights reserved.
