@@ -32,9 +32,9 @@ export default function Header() {
     navigate("/login");
   };
 
-  const handleSignUp = ()=>{
-    navigate("/signUp")
-  }
+  const handleSignUp = () => {
+    navigate("/signUp");
+  };
 
   const drawerContent = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
@@ -50,20 +50,35 @@ export default function Header() {
     </Box>
   );
 
-  const handleHome = () =>{
-    navigate("/")
-  }
+  const handleHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <AppBar
-        position="static"
+        position="fixed" // Make the header fixed at the top
         elevation={4}
-        sx={{ backgroundColor: "white", color: "teal",padding:"8px" }}
+        sx={{
+          backgroundColor: "white",
+          color: "teal",
+          padding: "8px",
+          width: "100%", // Ensure it spans the full width
+          top: 0, // Ensure it's positioned at the top
+          left: 0, // Align with the left of the page
+          zIndex: theme.zIndex.drawer + 1, // Ensure it's above other elements
+        }}
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/* Logo */}
-          <Typography variant="h1" sx={{ fontWeight: "bold", color: "teal",cursor:"pointer" }}
-          onClick={handleHome}
+          <Typography
+            variant="h1"
+            sx={{
+              fontWeight: "bold",
+              color: "teal",
+              cursor: "pointer",
+            }}
+            onClick={handleHome}
           >
             DocOnCall
           </Typography>
@@ -92,7 +107,7 @@ export default function Header() {
               ))}
 
               {/* Auth Buttons */}
-              <Btn  onClick={handleLogin} />
+              <Btn onClick={handleLogin} />
               <Btn label="Sign Up" onClick={handleSignUp} />
             </Stack>
           )}

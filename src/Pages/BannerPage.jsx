@@ -8,7 +8,8 @@ const BannerPage = () => {
       sx={{
         px: { xs: 3, md: 10 },
         py: { xs: 6, md: 12 },
-        flexDirection:{xs:"column",sm:"row"},
+        marginTop: { xs: 1, md: 6 },
+        flexDirection: { xs: "column", sm: "row" },
       }}
     >
       <Grid container spacing={8} alignItems="center" justifyContent="center">
@@ -51,7 +52,7 @@ const BannerPage = () => {
             real-time chat, and easy scheduling options.
           </Typography>
 
-         <Btn label="Consult" />
+          <Btn label="Consult" />
         </Grid>
       </Grid>
     </Box>
