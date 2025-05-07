@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Btn from "../CommonComponenet/CommonButtons/Btn";
 
 const BannerPage = () => {
@@ -13,46 +13,46 @@ const BannerPage = () => {
       }}
     >
       <Grid container spacing={8} alignItems="center" justifyContent="center">
-        {/* Left: Illustration */}
+        {/* Left: Doctor Image */}
         <Grid item xs={12} md={6} textAlign="center">
           <Box
             component="img"
             src="/Images/doctor.png"
-            alt="Doctor consultation illustration"
+            alt="Doctor portrait"
             sx={{ width: "100%", maxWidth: 400 }}
           />
         </Grid>
 
-        {/* Right: Text Content */}
+        {/* Right: Doctor Introduction */}
         <Grid item xs={12} md={6} width={700}>
           <Typography variant="h3" fontWeight={600} gutterBottom>
-            Your Doctor, On-Demand: Anytime, Anywhere with{" "}
+            Meet{" "}
             <Box component="span" color="#14B8A6" fontWeight="bold">
-              DocOnCall
+              Dr. John Doe
             </Box>
-            .
+            , Your Trusted Healthcare Partner.
           </Typography>
 
           <Typography variant="body2" color="text.secondary" paragraph>
-            DocOnCall is a telemedicine platform that provides you with virtual
-            medical care at your convenience. With DocOnCall, you can connect
-            with certified healthcare professionals, including doctors, nurses,
-            and specialists, from the comfort of your own home or wherever you
-            are.
-          </Typography>
-          <Typography variant="body2" color="text.secondary" paragraph>
-            Whether you have a minor health concern, need a prescription refill,
-            or require ongoing treatment for a chronic condition, DocOnCall
-            makes it easy for you to get the care you need without having to
-            visit a physical clinic.
-          </Typography>
-          <Typography variant="body2" color="text.secondary" paragraph>
-            Our user-friendly platform is designed to make healthcare accessible
-            and affordable for everyone, with secure video consultations,
-            real-time chat, and easy scheduling options.
+            Dr. John Doe is a board-certified physician with over 15 years of experience
+            in internal medicine and patient care. Known for his compassionate approach and
+            dedication to improving lives, Dr. Doe believes in providing personalized
+            and holistic healthcare solutions.
           </Typography>
 
-          <Btn label="Consult" />
+          <Typography variant="body2" color="text.secondary" paragraph>
+            Throughout his career, Dr. Doe has successfully treated a wide range of
+            medical conditions and is highly regarded for his diagnostic skills and
+            ability to make patients feel at ease.
+          </Typography>
+
+          <Typography variant="body2" color="text.secondary" paragraph>
+            Whether you're dealing with a chronic condition or seeking guidance for
+            a healthier lifestyle, Dr. Doe is committed to helping you achieve your
+            wellness goals with care, respect, and professionalism.
+          </Typography>
+
+          <Btn label="Book Appointment" />
         </Grid>
       </Grid>
     </Box>
