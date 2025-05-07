@@ -29,6 +29,16 @@ const theme = createTheme({
         fontSize:"16px",
         fontWeight:"600",
     },
+    h6: {
+      fontSize: "70px",
+      lineHeight: "80px",
+      '@media (max-width:600px)': {
+        fontSize: "38px",
+        lineHeight: "48px",
+      
+      },
+    }
+,    
     body1:{
         color:"#14B8A6",
         fontSize:"20px",
